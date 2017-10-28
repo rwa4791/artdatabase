@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>Sign-Up Today!</title>
+  <title>Sale's Records!</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -67,15 +67,15 @@
       <div class="col-lg-6">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Most Recent Member</h3>
+            <h3 class="panel-title">Most Recent Sale</h3>
           </div>
           <div class="panel-body" id="recent-member">
-            <h2 id="name-display">Jimmy John</h2>
-            <h4 id="email-display">Email: jimmy@john.edu</h4>
+            <h2 id="name-display">Artist:</h2>
+            <h4 id="email-display">Email: </h4>
             <h4 id="product-display">Product: </h4>
-            <h4 id ="cost-display">Cost: 0 </h4>
-            <h4 id ="cash-display">Cash/Credit :? </h4>
-            <p id="comment-display">I'm signing up, because I want to spread sandwiches to the world.</p>
+            <h4 id ="cost-display">Cost:  </h4>
+            <h4 id ="cash-display">Cash/Credit: </h4>
+            <p id="comment-display">Any Notes From the Sale?</p>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@
     });
 
     // Firebase watcher + initial loader HINT: .on("value")
-    database.ref().on("value", function(snapshot) {
+    database.ref().limitToLast(10).on("child_added", function(snapshot) {
 
       // Log everything that's coming out of snapshot
       console.log(snapshot.val());
