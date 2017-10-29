@@ -1,8 +1,6 @@
 
     // START CODING BELOW!!
-
-    // Initialize Firebase
-    var config = {
+var config = {
     apiKey: "AIzaSyBxSfTV_aXe2hP3S7mdz70RPuvYdDXCtMU",
     authDomain: "art-database.firebaseapp.com",
     databaseURL: "https://art-database.firebaseio.com",
@@ -10,8 +8,7 @@
     storageBucket: "art-database.appspot.com",
     messagingSenderId: "735715142891"
   };
-
-    firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
     // Create a variable to reference the database
     var database = firebase.database();
