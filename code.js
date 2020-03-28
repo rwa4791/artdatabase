@@ -1,14 +1,17 @@
 
     // START CODING BELOW!!
-var config = {
-    apiKey: "AIzaSyBxSfTV_aXe2hP3S7mdz70RPuvYdDXCtMU",
-    authDomain: "art-database.firebaseapp.com",
-    databaseURL: "https://art-database.firebaseio.com",
-    projectId: "art-database",
-    storageBucket: "art-database.appspot.com",
-    messagingSenderId: "735715142891"
+ var firebaseConfig = {
+    apiKey: "AIzaSyBRJ3GLYauPB6z_kN3HIblrKpqgFDQ9p4I",
+    authDomain: "art-database-bbc3f.firebaseapp.com",
+    databaseURL: "https://art-database-bbc3f.firebaseio.com",
+    projectId: "art-database-bbc3f",
+    storageBucket: "art-database-bbc3f.appspot.com",
+    messagingSenderId: "1077103180754",
+    appId: "1:1077103180754:web:76f951da53fff4ada5a60b",
+    measurementId: "G-H9ZMLNEJCX"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
     // Create a variable to reference the database
     var database = firebase.database();
